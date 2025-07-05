@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<style>
+ .card-item{
+list-style: none;
+ }
+.card-link{
+
+ backdrop-filter: blur(100px);
+user-select: none;
+height: 550px;
+list-style: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 10px;
+padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(15px);
+      text-decoration: none;
+      color: var(#f8f8f8);
+border-radius: 25px;
+box-shadow: 2px 2px 12px black;
+  /* width: 320px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      text-align: center; */
+
+}
+.card-item a{
+    color: #f8f8f8;
+    text-decoration: none;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow :hidden
+
+
+}
+
+.datacontainer{
+   
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(44, 44, 44);
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 20px;
+    gap: 60px;
+}
+
+.datacontainer>div>div{
+    display: flex;
+    flex-direction: column;
+}
+.datacontainer>span{
+    margin-top: 10px;
+    font-size: 19px;
+    margin-left: 15px;
+    width: 80px;
+    align-self: flex-start;
+    display: inline-block;
+    
+}
+ .dailyday{
+    margin: 10px 0 5px  0;
+    font-size: 25px;
+    font-weight: 600;
+ }
+.val{
+    display: flex;
+    column-gap: 30px;
+    row-gap: 100px;
+}
+.val span{
+    margin-top: 5px;
+    font-size: 15px;
+
+}
+.val strong{
+    margin-bottom: 3px;
+    font-size: 19px;
+}
+.tempcontainer{
+    margin-top: 33px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.tempcontainer div{
+    display: flex;
+    flex-direction: column;
+     
+}
+.tempmaxval,.tempavgval,.tempminval{
+    text-align: center;
+}
+.tempavgval strong{
+    font-size: 34px;
+}
+.tempavgval span {
+    font-size: 20px;
+}
+
+.datacontainer figure{
+    margin-left:20px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+}
+.datacontainer figure figcaption{
+     margin-top: 5px;
+    font-size: 15px;
+}
+.datacontainer figure img{
+    width: 35px;
+
+}
+</style>
+</head>
+<body>
+     <div class="container swiper">
+                <div class="card-wrapper ">
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <a href="" class="card-link">
+                                <div class="dailyday">Wednesday</div>
+                                <div class="daiydate">25-12-2025</div>
+                                <div class="tempcontainer">
+                                    <div class="tempmaxval">
+                                        <strong>33&deg;C</strong>
+                                        <span>Max</span>
+                                    </div>
+                                    <div class="tempavgval">
+                                        <strong>33&deg;C</strong>
+                                        <span>Avg</span>
+                                    </div>
+                                    <div class="tempminval">
+                                        <strong>33&deg;C</strong>
+                                        <span>Min</span>
+                                    </div>
+                                </div>
+
+                                <div class="humcontainer datacontainer">
+                                    <figure>
+                                        <figcaption>Humidity</figcaption>
+                                        <img src="humidity.svg" alt="">
+                                    </figure>
+
+                                    <div class="val">
+                                        <div class="maxval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Max</span>
+                                        </div>
+                                        <div class="avgval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Avg</span>
+                                        </div>
+                                        <div class="minval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prcontainer datacontainer">
+                                    <figure>
+                                        <figcaption>Pressure</figcaption>
+                                        <img src="pressure.svg" alt="">
+                                    </figure>
+                                    <div class="val">
+                                        <div class="maxval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Max</span>
+                                        </div>
+                                        <div class="avgval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Avg</span>
+                                        </div>
+                                        <div class="minval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="windcontainer datacontainer">
+                                    <figure>
+                                        <figcaption>Wind Speed</figcaption>
+                                        <img src="wind.svg" alt="">
+                                    </figure>
+                                    <div class="val">
+                                        <div class="maxval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Max</span>
+                                        </div>
+                                        <div class="avgval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Avg</span>
+                                        </div>
+                                        <div class="minval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Min</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="card-item swiper-slide">
+                            <a href="" class="card-link">
+                                <div class="dailyday">Wednesday</div>
+                                <div class="daiydate">25-12-2025</div>
+                                <div class="tempcontainer">
+                                    <div class="tempmaxval">
+                                        <strong>33&deg;C</strong>
+                                        <span>Max</span>
+                                    </div>
+                                    <div class="tempavgval">
+                                        <strong>33&deg;C</strong>
+                                        <span>Avg</span>
+                                    </div>
+                                    <div class="tempminval">
+                                        <strong>33&deg;C</strong>
+                                        <span>Min</span>
+                                    </div>
+                                </div>
+
+                                <div class="humcontainer datacontainer">
+                                    <figure>
+                                        <figcaption>Humidity</figcaption>
+                                        <img src="humidity.svg" alt="">
+                                    </figure>
+
+                                    <div class="val">
+                                        <div class="maxval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Max</span>
+                                        </div>
+                                        <div class="avgval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Avg</span>
+                                        </div>
+                                        <div class="minval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prcontainer datacontainer">
+                                    <figure>
+                                        <figcaption>Pressure</figcaption>
+                                        <img src="pressure.svg" alt="">
+                                    </figure>
+                                    <div class="val">
+                                        <div class="maxval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Max</span>
+                                        </div>
+                                        <div class="avgval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Avg</span>
+                                        </div>
+                                        <div class="minval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="windcontainer datacontainer">
+                                    <figure>
+                                        <figcaption>Wind Speed</figcaption>
+                                        <img src="wind.svg" alt="">
+                                    </figure>
+                                    <div class="val">
+                                        <div class="maxval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Max</span>
+                                        </div>
+                                        <div class="avgval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Avg</span>
+                                        </div>
+                                        <div class="minval">
+                                            <strong>33&deg;C</strong>
+                                            <span>Min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+       <script>
+        const swiper = new Swiper('.card-wrapper', {
+  // Optional parameters
+ 
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+       </script>   
+</body>
+</html>
