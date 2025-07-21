@@ -38,8 +38,15 @@
         <button id="curloc"> Current Location</button>
     </header>
     <section class="main-sec">
+
+
+
+        <div class="Current-weather-title">
+            <h2>Current Weather Forecast</h2>
+        </div>
         <section class="sec1">
-          
+
+
             <div class="card1">
                 <div class="city"></div>
                 <div class="time">08:00</div>
@@ -53,14 +60,14 @@
                 <div class="tempandsun">
                     <div class="temp"><span id="temp">55.5</span>&deg;C</div>
                     <div class="sunrise riseset">
-                        <img src="sunrise.svg" alt="">
+                        <img id="sunriseimg" alt="">
                         <div class="suntexttime">
                             <span class="suntext">Sunrise</span>
                             <span class="sunrisetime">08:32 AM</span>
                         </div>
                     </div>
                     <div class="sunset riseset">
-                        <img src="sunset.svg" alt="">
+                        <img id="sunsetimg" alt="">
                         <div class="suntexttime">
                             <span class="suntext">Sunset</span>
                             <span class="sunsettime">08:32 PM</span>
@@ -69,28 +76,28 @@
                 </div>
                 <div class="atmosphere">
                     <div class="sun">
-                        <img id="atmimg" src="" alt="">
+                        <img id="atmimg" alt="">
                     </div>
                     <div class="atmospheretext">Partly cloudy</div>
                 </div>
                 <div class="hwp">
                     <div class="humidity">
-                        <img src="humidity.svg" alt="">
+                        <img id="humidityimg" alt="">
                         <div class="humval">80%</div>
                         <div class="humtext">Humidity</div>
                     </div>
                     <div class="wind">
-                        <img src="wind.svg" alt="">
+                        <img id="windimg" alt="">
                         <div class="wval">2km/h</div>
                         <div class="wtext">Wind Speed</div>
                     </div>
                     <div class="pressure">
-                        <img src="pressure.svg" alt="">
+                        <img id="pressureimg" alt="">
                         <div class="pval">90Pa</div>
                         <div class="ptext">Pressure</div>
                     </div>
                     <div class="visibility">
-                        <img src="visibility.svg" alt="">
+                        <img id="visibilityimg" alt="">
                         <div class="uvval">10</div>
                         <div class="uvtext">UV Index</div>
                     </div>
@@ -100,11 +107,15 @@
             </div>
         </section>
 
+        <div class="daily-weather-title">
+            <h2>Daily Weather Forecast</h2>
+        </div>
+
         <section class="sec2">
             <div class="container swiper">
                 <div class="card-wrapper ">
                     <ul class="card-list swiper-wrapper">
-                  
+
                     </ul>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -122,17 +133,80 @@
             <span class="hodate">23-12-2023</span>
             <span class="hoday">Wednesday</span>
         </div>
-        
+
         <div class="hourly-container">
 
         </div>
-       
+
 
     </section>
-    
+    <footer class="footer">
+        <div class="footer-content">
+            <span>&copy; 2024 Weather App. All rights reserved.</span>
+          </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    
+    <script>
+
+        const checkbox = document.getElementById('checkbox')
+
+        const sunriseimg = document.getElementById('sunriseimg')
+        const sunsetimg = document.getElementById('sunsetimg')
+        const windimg = document.getElementById('windimg')
+        const humidityimg = document.getElementById('humidityimg')
+        const pressureimg = document.getElementById('pressureimg')
+        const visibilityimg = document.getElementById('visibilityimg')
+
+        // Set default theme on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('bg-dark'); // Default to dark mode
+
+                sunriseimg.src = "/assets/sunrise.svg"
+                sunsetimg.src = "/assets/sunset.svg"
+                windimg.src = "/assets/wind.svg"
+                pressureimg.src = "/assets/pressure.svg"
+                humidityimg.src = "/assets/humidity.svg"
+                visibilityimg.src = "/assets/visibility.svg"
+
+            checkbox.checked = false;
+        });
+
+        checkbox.addEventListener("change", () => {
+            console.log('Checkbox changed:', checkbox.checked);
+            // Toggle dark/light mode
+            if (checkbox.checked) {
+                document.body.classList.remove('bg-dark');
+                document.body.classList.add('bg-light');
+
+                sunriseimg.src = "/assets/white_bg/sunrise-white 1.svg"
+                sunsetimg.src ="/assets/white_bg/sunset-white 1.svg"
+                windimg.src = "/assets/white/wind 1.svg"
+                pressureimg.src = "/assets/white_bg/pressure-white 1.svg"
+                humidityimg.src = "/assets/white_bg/humidity 1.svg"
+                visibilityimg.src = "/assets/white/uv-white 1.svg"
+
+
+
+            } else {
+                document.body.classList.remove('bg-light');
+                document.body.classList.add('bg-dark');
+
+                sunriseimg.src = "/assets/sunrise.svg"
+                sunsetimg.src = "/assets/sunset.svg"
+                windimg.src = "/assets/wind.svg"
+                pressureimg.src = "/assets/pressure.svg"
+                humidityimg.src = "/assets/humidity.svg"
+                visibilityimg.src = "/assets/visibility.svg"
+            }
+        })
+
+
+
+
+
+    </script>
+
 </body>
 
 </html>
