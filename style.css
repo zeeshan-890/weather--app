@@ -852,11 +852,12 @@
         }
 
         .footer {
-            width: 100vw;
+            width: 90vw;
             padding: 24px 0 12px 0;
             background: var(--card-bg);
             color: var(--header-font);
             display: flex;
+               margin : auto;
             justify-content: center;
             align-items: center;
             border-top: 1px solid var(--locitem-hover);
